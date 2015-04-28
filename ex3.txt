@@ -1,0 +1,125 @@
+練習問題3.1
+
+スクリプト
+repeat_lyrics()
+
+def print_lyrics():
+    print "I'm a lumberjack, and I'm okay."
+    print "I sleep all night and work all day"
+
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+
+実行結果
+C:\Anaconda>python 3.1.py
+Traceback (most recent call last):
+  File "3.1.py", line 1, in <module>
+    repeat_lyrics()
+NameError: name 'repeat_lyrics' is not defined
+
+
+練習問題3.2
+
+スクリプト
+def repeat_lyrics():
+    print_lyrics()
+    print_lyrics()
+
+def print_lyrics():
+    print "I'm a lumberjack, and I'm okay."
+    print "I sleep all night and work all day"
+
+repeat_lyrics()
+
+実行結果
+C:\Anaconda>python 3.2.py
+I'm a lumberjack, and I'm okay.
+I sleep all night and work all day
+I'm a lumberjack, and I'm okay.
+I sleep all night and work all day
+
+
+練習問題3.3
+
+>>> def right_justify(par):
+...     print "%70s" % par
+...
+>>> right_justify("allen")
+                                                                 allen
+
+
+練習問題3.4
+
+1.
+スクリプト
+def do_twice(f):
+	f()
+	f()
+
+def print_spam():
+	print 'spam'
+	
+do_twice(print_spam)
+
+実行結果
+C:\Anaconda>python 3.4.1.py
+spam
+spam
+
+
+2.
+スクリプト
+def do_twice(f, a):
+    f(a)
+    f(a)
+
+def print_spam(a):
+    print a
+    
+do_twice(print_spam, 'spam')
+
+実行結果
+C:\Anaconda>python 3.4.2.py
+spam
+spam
+
+
+3．
+スクリプト
+def do_twice(f, a):
+    f(a)
+
+def print_twice(a):
+    print a
+    print a
+	
+do_twice(print_twice, 'spam')
+
+実行結果
+C:\Anaconda>python 3.4.3.py
+spam
+spam
+
+
+4．
+スクリプト
+def do_twice(f, a):
+    f(a)
+
+def print_twice(a):
+    print a
+    print a
+
+def do_four(f, a):
+    do_twice(f, a)
+    do_twice(f, a)
+	
+do_four(print_twice, 'spam')
+
+実行結果
+C:\Anaconda>python 3.4.4.py
+spam
+spam
+spam
+spam
