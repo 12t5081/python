@@ -1,0 +1,112 @@
+4.3 ââèKñ‚ëË
+
+
+
+1,
+from swampy.TurtleWorld import *
+
+world = TurtleWorld()
+bob = Turtle()
+
+def square(t):
+    for i in range(4):
+        fd(t, 100)
+        lt(t)
+
+square(bob)
+
+wait_for_user()
+
+
+
+2,
+from swampy.TurtleWorld import *
+
+world = TurtleWorld()
+bob = Turtle()
+
+def square(t, length):
+    for i in range(4):
+        fd(t, length)
+        lt(t)
+
+square(bob, 100)
+
+wait_for_user()
+
+
+
+3,
+from swampy.TurtleWorld import *
+
+world = TurtleWorld()
+bob = Turtle()
+
+def polygon(t, length, n):
+    for i in range(n):
+        fd(t, length)
+        lt(t, 360.0/n)
+
+polygon(bob, 50, 8)
+
+wait_for_user()
+
+
+
+4,
+from swampy.TurtleWorld import *
+import math
+world = TurtleWorld()
+bob = Turtle()
+
+def polygon(t, length, n):
+    for i in range(n):
+        fd(t, length)
+        lt(t, 360.0/n)
+
+def circle(t, r):
+    circumference = 2.0 *  r * math.pi
+    n = int(math.ceil(r))
+    length = circumference / 100
+    polygon(t, length, n)
+
+bob.delay = 0.01
+circle(bob, 100)
+
+wait_for_user()
+
+
+
+5, 
+from swampy.TurtleWorld import *
+import math
+world = TurtleWorld()
+bob = Turtle()
+
+def polygon(t, length, n):
+    for i in range(n):
+        fd(t, length)
+        lt(t, 360.0/n)
+
+def circle(t, r):
+    circumference = 2.0 *  r * math.pi
+    n = int(math.ceil(r))
+    length = circumference / 100
+    polygon(t, length, n)
+
+def polyline(t, length, n, m):
+    for i in range(m):
+        fd(t, length)
+        lt(t, 360.0/n)
+
+def arc(t, r, angle):
+    circumference = 2.0 *  r * math.pi
+    n = int(math.ceil(r))
+    length = circumference / 100
+    m = int(angle / 360.0 * n)
+    polyline(t, length, n, m)
+
+bob.delay = 0.01
+arc(bob, 100, 180)
+
+wait_for_user()
