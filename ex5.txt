@@ -1,0 +1,16 @@
+—ûK–â‘è5.2
+
+def do_n(a, n):
+    if n <= 0:
+        return
+    a()
+    do_n(a, n-1)
+
+def a():
+    print 'ok'
+    
+do_n(a, 3)
+
+
+
+—ûK–â‘è5.3
