@@ -1,0 +1,12 @@
+練習問題5.1
+
+def print_n(n):
+    while n > 0:
+        print n
+        n = n-1
+        
+print_n(5)
+
+
+練習問題5.2
+
