@@ -1,0 +1,57 @@
+練習問題8.1
+
+def reverse(word):
+    n = 0
+    length = len(word)-1
+    while n < len(word):
+        letter = word[length-n]
+        print letter
+        n += 1
+        
+reverse("abcdefg")
+
+結果：
+g
+f
+e
+d
+c
+b
+a
+
+
+練習問題8.2
+
+prefixes = 'JKLMNOPQ'
+sufix = 'ack'
+for letter in prefixes:
+    if letter == 'O' or letter =='Q':
+        print letter + 'u' + sufix
+    else:
+        print letter + sufix
+
+結果：
+Jack
+Kack
+Lack
+Mack
+Nack
+Ouack
+Pack
+Quack
+
+
+練習問題8.3
+
+fruitの最初から最後まで
+
+
+練習問題8.4
+
+def find(word, letter, start=0):
+    index = start
+    while index < len(word):
+        if word[index] == letter:
+            return index
+        index = index + 1
+    return -1
