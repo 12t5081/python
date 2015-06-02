@@ -1,4 +1,4 @@
-練習問題5.1
+﻿練習問題7.1
 
 def print_n(n):
     while n > 0:
@@ -8,5 +8,16 @@ def print_n(n):
 print_n(5)
 
 
-練習問題5.2
+練習問題7.2
+
+EPSILON = 0.000000001
+
+def sqrt_root(a):
+    x = a - 1.0
+        while True:
+            y = (x + a/x) / 2.0
+            if abs(y-x) < EPSILON:
+                return y
+            else:
+                x = y
 
