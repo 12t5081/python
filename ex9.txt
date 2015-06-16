@@ -1,0 +1,75 @@
+練習問題9.1
+
+f = open('words.txt')
+for line in f:
+    word = line.strip()
+    if len(word) >= 20:
+        print word
+
+結果：
+counterdemonstration
+counterdemonstrations
+counterdemonstrators
+hyperaggressivenesses
+hypersensitivenesses
+microminiaturization
+microminiaturizations
+representativenesses
+
+
+
+練習問題9.2
+
+def has_no_e(word):
+    return 'e' not in word 
+    
+    #for letter in word:
+    #    if letter == 'e':
+    #        return False
+    #    return True
+
+print has_no_e('abc')
+print has_no_e('efg')
+
+結果：
+True
+False
+
+
+f = open('words.txt')
+lines = f.readlines()
+
+total = len(lines)
+count = 0
+for line in lines:
+    if has_no_e(line.strip()):
+        count += 1
+        
+print total
+print count
+percentage = count * 100.0/total
+print 'percentage = %f %%' % percentage
+
+結果：
+Please input string : e
+113809
+37641
+percentage = 33.073834 %
+
+
+
+練習問題9.3
+
+def avoid(word, forbidden):
+    for letter in word:
+        if letter in forbidden:
+            return False
+        return True
+print avoid('abc', 'e')
+print avoid('abc', 'efg')
+print avoid('efg', 'e')
+
+結果：
+True
+True
+False
